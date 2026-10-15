@@ -3,14 +3,30 @@
   "task": 7,
   "repository": "git@github.com:TonysBlue/VoiceProof.git",
   "branch": "task/7",
-  "context_id": "ctx-task-7-generation-2",
-  "bundle_sha256": "c43eaab5e0907413de904772df835b737e97dc233f20fc7d24bc18b6d04a2273",
+  "context_id": "ctx-task-7-generation-3",
+  "bundle_sha256": "d581db19a8ae8760a76806f0c9720dbe5f382778a2cdebf6e6a839739f6ee790",
   "product_base": "f679dfd7b32b34a1173cf082c37e6ce07d10b1d5",
-  "acceptance": "pending: task5 reconciliation, Python3.11 canonical, remote delivery and independent review",
+  "acceptance": "internal materials verified; pending trusted host delivery and Chairman G0 experience",
   "files": {
-    "docs/validation/CHAIRMAN_REVIEW.md": "ecae4910b527082836804e04395a54baf2d6f4efc47491a7238527f446e53b39",
-    "evidence/task-7/VERIFICATION.md": "1b6999a259618370f47a250872d536a1ade675204bc15125fea52ed439aef769",
-    "evidence/task-7/CONTINUITY.json": "10bae6864ec516c620080b9ad7874671fbb8d0bd18e40b2d15f0f00f25d05695"
+    "docs/validation/CHAIRMAN_REVIEW.md": "0f9f8d7a740b2184f6b3541ca4e9af1eedc0bc71f03cb438d8077da5e6a6d882",
+    "evidence/task-7/VERIFICATION.md": "fc338ba7b5c3ad20139bd99d7002cb4be278d74c5f7fd807d6df39be7366c4d8",
+    "evidence/task-7/CONTINUITY.json": "e569ae2d270304e9c53333faee5a1780c02ed95680c21ff7a0260681f115f313"
   },
-  "delivery_status": "SSH host key verification failed; local delivery only"
+  "delivery_status": "pending trusted host-side delivery",
+  "verification": {
+    "canonical": {
+      "command": "python3.11 -m unittest discover -s tests -v",
+      "python": "3.11.17",
+      "tests": 8,
+      "exit_code": 0,
+      "source": "independent formal-repository review"
+    },
+    "supplemental": {
+      "command": "python3 -m unittest discover -s tests -v",
+      "python": "3.12.3",
+      "tests": 8,
+      "exit_code": 0
+    },
+    "task5_reconciliation": "company evidence a32abe2159e7fa5784c234e1497af76558bb8d23; ledger status reconciled"
+  }
 }
