@@ -1,0 +1,38 @@
+{
+  "schema_version": "agent-company-continuity/v1",
+  "role": "Customer & Revenue",
+  "summary": "VoiceProof封闭需求验证与分阶段审批材料已形成并复核；任务5对账及Python3.11验证已确认，无外部执行。",
+  "verified_facts": [
+    "VoiceProof产品提交f679dfd已推送正式main，任务5由CEO以公司证据提交a32abe2治理对账",
+    "Python3.11.17正式仓与Python3.12.3任务沙箱均运行8项测试通过",
+    "内部方案限定最多12名成年国内口播创作者，所有外部阶段均待董事长单独批准"
+  ],
+  "open_items": [
+    "董事长体验正式产品并决定是否接受G0",
+    "独立质量、Finance & Risk与Legal/Compliance按阶段评审",
+    "G1及以后外部触达、数据、价格、收费、发布均保持未批准"
+  ],
+  "project_summary": "离线文本对齐与PCM WAV检查产品，无ASR、支付或账户；需求与付费意愿未知。",
+  "project_decisions": [
+    "最多12人、分两批、审批前不招募",
+    "候选按次、预付、订阅金额仅为内部假设，未生效",
+    "不创建第二套实现，不接客户或支付系统"
+  ],
+  "known_limits": [
+    "无真实需求、满意度、付费、收入或退款证据",
+    "合成测试不证明真实用户准确率",
+    "极小便利样本不能代表国内市场"
+  ],
+  "handoffs": [
+    {
+      "to_role": "CEO",
+      "handoff_type": "review_request",
+      "summary": "审阅任务7材料并安排董事长G0正式产品体验；外部阶段保持未授权",
+      "artifact_refs": [
+        "docs/validation/CHAIRMAN_REVIEW.md",
+        "evidence/task-7/VERIFICATION.md"
+      ],
+      "decision_needed": "是否接受内部材料并安排G0体验；不包含G1及以后批准"
+    }
+  ]
+}
