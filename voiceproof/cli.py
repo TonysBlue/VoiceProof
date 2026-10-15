@@ -2,10 +2,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
+import wave
 from pathlib import Path
 
 from .alignment import inspect
 from .audio import inspect_wav
+from .text import tokens
 
 
 def _write(payload: dict, output: Path) -> None:
@@ -25,10 +28,23 @@ def main(argv: list[str] | None = None) -> int:
     wav.add_argument("--audio", type=Path, required=True)
     wav.add_argument("--output", type=Path, required=True)
     args = parser.parse_args(argv)
-    if args.command == "check-text":
-        payload = inspect(args.script.read_text(encoding="utf-8"), args.transcript.read_text(encoding="utf-8"), args.term)
-    else:
-        payload = inspect_wav(args.audio)
-    _write(payload, args.output)
+    try:
+        inputs = [args.script, args.transcript] if args.command == "check-text" else [args.audio]
+        if any(args.output.resolve() == path.resolve() or
+               (args.output.exists() and path.exists() and args.output.samefile(path))
+               for path in inputs):
+            raise ValueError("output must not overwrite an input file")
+        if args.command == "check-text":
+            script = args.script.read_text(encoding="utf-8-sig")
+            transcript = args.transcript.read_text(encoding="utf-8-sig")
+            if not tokens(script) or not tokens(transcript):
+                raise ValueError("script and transcript must contain readable text")
+            payload = inspect(script, transcript, args.term)
+        else:
+            payload = inspect_wav(args.audio)
+        _write(payload, args.output)
+    except (OSError, UnicodeError, ValueError, wave.Error, EOFError) as error:
+        print(f"voiceproof: {error}", file=sys.stderr)
+        return 1
     return 0
 

@@ -24,9 +24,11 @@ def inspect(script: str, transcript: str, terms: Iterable[str] = ()) -> dict:
         })
     if extract_numbers(script) != extract_numbers(transcript):
         issues.append({"type": "number_mismatch", "expected": extract_numbers(script), "observed": extract_numbers(transcript), "review_required": True})
-    normalized_observed = "".join(observed)
     for term in terms:
-        if term and term.lower() in script.lower() and term.lower() not in normalized_observed:
+        term_tokens = tokens(term)
+        def contains(sequence):
+            return any(sequence[i:i + len(term_tokens)] == term_tokens for i in range(len(sequence) - len(term_tokens) + 1))
+        if term_tokens and contains(expected) and not contains(observed):
             issues.append({"type": "term_mismatch", "term": term, "review_required": True})
     return {
         "schema_version": "voiceproof-report/v1",
