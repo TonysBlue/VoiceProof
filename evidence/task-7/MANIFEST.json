@@ -3,12 +3,14 @@
   "task": 7,
   "repository": "git@github.com:TonysBlue/VoiceProof.git",
   "branch": "task/7",
+  "context_id": "ctx-task-7-generation-2",
+  "bundle_sha256": "c43eaab5e0907413de904772df835b737e97dc233f20fc7d24bc18b6d04a2273",
   "product_base": "f679dfd7b32b34a1173cf082c37e6ce07d10b1d5",
-  "acceptance": "pending: task5 reconciled evidence and canonical Python3.11 verification",
+  "acceptance": "pending: task5 reconciliation, Python3.11 canonical, remote delivery and independent review",
   "files": {
-    "docs/validation/CHAIRMAN_REVIEW.md": "eeb65fc91c1dcc5d07e4d84098f69497a1581521a325abc6022f9ca9ea056fa2",
-    "evidence/task-7/VERIFICATION.md": "f608e9347dfbb081bc4fdeaaf471745504117da8cca53fd0e8565e6f7e0bfe17",
-    "evidence/task-7/CONTINUITY.json": "1a7c38be51dba18fe80a7610d3164ad483f99f16cb969658f6e449fef40add3e"
+    "docs/validation/CHAIRMAN_REVIEW.md": "ecae4910b527082836804e04395a54baf2d6f4efc47491a7238527f446e53b39",
+    "evidence/task-7/VERIFICATION.md": "1b6999a259618370f47a250872d536a1ade675204bc15125fea52ed439aef769",
+    "evidence/task-7/CONTINUITY.json": "10bae6864ec516c620080b9ad7874671fbb8d0bd18e40b2d15f0f00f25d05695"
   },
-  "delivery_status": "local commit only; push blocked by SSH host key verification"
+  "delivery_status": "SSH host key verification failed; local delivery only"
 }

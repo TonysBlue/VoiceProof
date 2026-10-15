@@ -1,17 +1,17 @@
 {
   "schema_version": "agent-company-continuity/v1",
   "role": "Customer & Revenue",
-  "summary": "任务7内部审批稿已形成；未执行外部动作。全部验收仍待任务5正式对账与Python3.11验证。",
+  "summary": "重新派发材料已按v17修订；方案可审阅，全部验收待任务5对账、Python3.11与可信SSH交付；无外部执行。",
   "verified_facts": [
     "独立VoiceProof仓task/7，产品基线f679dfd7b32b34a1173cf082c37e6ce07d10b1d5",
     "Python3.12.3补充测试8项通过",
     "canonical命令退出127：python3.11缺失"
   ],
   "open_items": [
-    "CEO补齐任务5已对账记录并核对策略中的旧任务号",
+    "CEO/Product Engineer补齐任务5正式对账、canonical与独立验收引用",
     "提供Python3.11环境完成canonical验证",
-    "独立评审与董事长分阶段决定；尚无外部授权",
-    "修复可信SSH主机校验后推送task/7；本次push因Host key verification failed失败，未绕过校验"
+    "恢复可信SSH主机校验后推送task/7；未绕过校验",
+    "CEO确认产品公共章程PixWeave名称与VoiceProof任务范围；组织独立评审与董事长G0体验"
   ],
   "project_summary": "离线文本对齐与PCM WAV检查原型，无ASR、支付或账户。需求与付费意愿未知。",
   "project_decisions": [
@@ -20,22 +20,23 @@
     "不创建第二套实现，不接客户/支付系统"
   ],
   "known_limits": [
-    "当前内部材料缺任务5已对账证据",
-    "3.12测试不能替代指定3.11检查",
-    "小样本不能代表国内市场；无真实需求或收入证据"
+    "任务5已对账证据未提供，此验收项未满足",
+    "3.12补充测试不能替代3.11 canonical",
+    "SSH主机校验失败，远端未交付",
+    "无真实需求、付费、收入或退款证据；极小样本不代表市场"
   ],
   "handoffs": [
     {
       "sender": "Customer & Revenue",
       "recipient": "CEO",
       "task": 7,
-      "summary": "核对任务5/旧任务号与验证环境，再组织独立评审和董事长体验审批",
+      "summary": "复核v17修订方案；补齐任务5、canonical与可信远端交付，确认角色范围并组织独立评审",
       "evidence_references": [
         "docs/validation/CHAIRMAN_REVIEW.md",
         "evidence/task-7/VERIFICATION.md"
       ],
-      "requested_decision": "补证与内部评审安排；不授权外部执行",
-      "acceptance_state": "内部草稿已交付，全部验收待补证；未确认接单"
+      "requested_decision": "CEO协调补证/环境/SSH及角色范围；董事长仅审阅与G0安排，外部阶段均待单独审批",
+      "acceptance_state": "内部材料完成自检；全量验收未通过；交接记录未确认接单"
     }
   ]
 }
