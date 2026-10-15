@@ -1,0 +1,14 @@
+{
+  "schema_version": "task-delivery-manifest/v1",
+  "task": 7,
+  "repository": "git@github.com:TonysBlue/VoiceProof.git",
+  "branch": "task/7",
+  "product_base": "f679dfd7b32b34a1173cf082c37e6ce07d10b1d5",
+  "acceptance": "pending: task5 reconciled evidence and canonical Python3.11 verification",
+  "files": {
+    "docs/validation/CHAIRMAN_REVIEW.md": "eeb65fc91c1dcc5d07e4d84098f69497a1581521a325abc6022f9ca9ea056fa2",
+    "evidence/task-7/VERIFICATION.md": "f608e9347dfbb081bc4fdeaaf471745504117da8cca53fd0e8565e6f7e0bfe17",
+    "evidence/task-7/CONTINUITY.json": "1a7c38be51dba18fe80a7610d3164ad483f99f16cb969658f6e449fef40add3e"
+  },
+  "delivery_status": "local commit only; push blocked by SSH host key verification"
+}
