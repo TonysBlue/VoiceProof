@@ -1,0 +1,10 @@
+[
+ {"name":"干净知识口播","script":"今天分享三个创作技巧。","spoken":"今天分享三个创作技巧。","types":[]},
+ {"name":"标点大小写","script":"欢迎使用 VoiceProof！","spoken":"欢迎使用 voiceproof。","types":[]},
+ {"name":"商品参数数字","script":"价格120元续航30小时","spoken":"价格20元续航30小时","types":["substitution","number_mismatch"]},
+ {"name":"结尾漏读","script":"欢迎关注我们下期再见","spoken":"欢迎关注我们","types":["omission"]},
+ {"name":"口误多读","script":"今天介绍录音技巧","spoken":"今天今天介绍录音技巧","types":["repetition"]},
+ {"name":"术语错读","script":"使用 VoiceProof 检查","spoken":"使用 Voice 检查","terms":["VoiceProof"],"types":["substitution","term_mismatch"]},
+ {"name":"低置信同音疑似","script":"这个方案可行","spoken":"这个方案可型","probability":0.25,"types":["substitution"]},
+ {"name":"常见中文数字归一化","script":"价格120元","spoken":"价格一百二十元","types":[]}
+]

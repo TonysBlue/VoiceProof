@@ -3,3 +3,12 @@ __pycache__/
 .venv/
 reports/
 
+.runtime/
+.models/
+.local/
+.cache/
+.tools/
+*.egg-info/
+build/
+dist/
+.config/
