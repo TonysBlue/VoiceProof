@@ -48,6 +48,20 @@ class ServerTests(unittest.TestCase):
         with self.request('/clear',b'') as response:
             self.assertEqual(json.load(response),{'ok':True})
 
+    def test_localhost_preview_forwarding_and_origin_protection(self):
+        headers = {'Host':'localhost:59666', 'Origin':'http://localhost:59666',
+                   'X-VoiceProof-Token':self.app.token}
+        with self.request('/', headers=headers) as response:
+            self.assertEqual(response.status,200)
+        with self.request('/clear', b'', headers) as response:
+            self.assertEqual(response.status,200)
+        for host, origin in [('localhost.evil.test:59666','http://localhost.evil.test:59666'),
+                             ('localhost:59666','http://localhost:12345'),
+                             ('localhost:99999','http://localhost:99999')]:
+            with self.assertRaises(urllib.error.HTTPError) as error:
+                self.request('/', headers={'Host':host,'Origin':origin})
+            self.assertEqual(error.exception.code,403)
+
     def test_job_lifecycle_cancel_expire_timeout_and_media_range(self):
         self.start_job(); directory=self.app.directory
         self.assertEqual(self.app.status()['state'],'running')

@@ -134,8 +134,12 @@ class Handler(BaseHTTPRequestHandler):
         pass  # Never log filenames, scripts, tokens or requests.
 
     def guard(self, mutation=False):
-        host = f'127.0.0.1:{self.server.server_port}'
-        if self.headers.get('Host') != host or self.headers.get('Origin', 'http://'+host) != 'http://'+host:
+        # Local preview proxies may use localhost and a different forwarded port.
+        import re
+        host = self.headers.get('Host', '')
+        local_host = re.fullmatch(r'(?:127\.0\.0\.1|localhost):([0-9]{1,5})', host)
+        valid = local_host is not None and 0 < int(local_host[1]) <= 65535
+        if not valid or self.headers.get('Origin', 'http://'+host) != 'http://'+host:
             self.send_error(403)
             return False
         if mutation and self.headers.get('X-VoiceProof-Token') != self.server.app.token:
