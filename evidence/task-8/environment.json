@@ -1,0 +1,15 @@
+{
+  "python": "3.11.17",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "health_request_ms": 5.686,
+  "ready": true,
+  "model_sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+  "dependencies": {
+    "faster-whisper": "1.2.1",
+    "av": "18.1.0",
+    "ctranslate2": "4.8.3",
+    "opencc-python-reimplemented": "0.1.7",
+    "playwright": "1.56.0"
+  },
+  "network": "model downloaded for internal testing; recognition workers force HF_HUB_OFFLINE=1, telemetry disabled"
+}

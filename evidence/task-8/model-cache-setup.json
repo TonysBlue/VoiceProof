@@ -1,0 +1,6 @@
+{
+  "test": "production worker setup reuses downloaded model with offline network policy; not first GUI download",
+  "state": "installed",
+  "ready": true,
+  "message": "本地引擎已准备好，可以开始检查"
+}

@@ -1,0 +1,191 @@
+{
+  "elapsed_seconds": 16.84,
+  "real_asr": true,
+  "real_wav": true,
+  "real_mp4": true,
+  "click_playback": true,
+  "confirm_ignore_export": true,
+  "clear_deleted": true,
+  "bad_media_recovery": true,
+  "mobile_no_horizontal_overflow": true,
+  "browser_errors": [],
+  "external_browser_requests": [],
+  "wav_report": {
+    "duration": 15.529,
+    "transcript": [
+      {
+        "text": "今天我們介紹露營技巧",
+        "start": 0.0,
+        "end": 3.32
+      },
+      {
+        "text": "露營是保持半天半天",
+        "start": 3.32,
+        "end": 6.84
+      },
+      {
+        "text": "距離麥克風二十厘米",
+        "start": 6.84,
+        "end": 10.02
+      },
+      {
+        "text": "完成後請仔細檢查",
+        "start": 10.02,
+        "end": 13.24
+      },
+      {
+        "text": "再發佈作品",
+        "start": 13.24,
+        "end": 15.0
+      }
+    ],
+    "issues": [
+      {
+        "id": 0,
+        "type": "substitution",
+        "label": "错读",
+        "start": 1.9,
+        "end": 2.48,
+        "expected": "录音",
+        "observed": "露营",
+        "confidence": 0.733,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 1,
+        "type": "substitution",
+        "label": "错读",
+        "start": 3.32,
+        "end": 4.64,
+        "expected": "录音时",
+        "observed": "露营是",
+        "confidence": 0.879,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 2,
+        "type": "substitution",
+        "label": "错读",
+        "start": 5.26,
+        "end": 6.84,
+        "expected": "环境安静",
+        "observed": "半天半天",
+        "confidence": 0.087,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 3,
+        "type": "omission",
+        "label": "漏读",
+        "start": 14.68,
+        "end": 15.0,
+        "expected": "感谢观看下期再见",
+        "observed": "",
+        "confidence": null,
+        "timing": "相邻词锚点（漏读无对应声音）",
+        "state": "review"
+      },
+      {
+        "id": 4,
+        "type": "possible_clipping",
+        "label": "疑似削波",
+        "start": 0.0,
+        "end": 15.529,
+        "expected": "",
+        "observed": "",
+        "confidence": null,
+        "timing": "音量峰值线索，定位为全片",
+        "state": "review"
+      }
+    ],
+    "similarity": 0.7045,
+    "warning": "同音字、中文数字语义和专有名词可能误判或漏检；发布前请完整回听。",
+    "conclusion": "建议复核"
+  },
+  "video_report": {
+    "duration": 15.53,
+    "transcript": [
+      {
+        "text": "今天我們介紹露營技巧",
+        "start": 0.0,
+        "end": 3.3
+      },
+      {
+        "text": "露營是保持半天半天",
+        "start": 3.3,
+        "end": 6.84
+      },
+      {
+        "text": "距離麥克風二十厘米",
+        "start": 6.84,
+        "end": 10.02
+      },
+      {
+        "text": "完成後請仔細檢查",
+        "start": 10.02,
+        "end": 13.24
+      },
+      {
+        "text": "再發佈作品",
+        "start": 13.24,
+        "end": 15.02
+      }
+    ],
+    "issues": [
+      {
+        "id": 0,
+        "type": "substitution",
+        "label": "错读",
+        "start": 1.9,
+        "end": 2.48,
+        "expected": "录音",
+        "observed": "露营",
+        "confidence": 0.71,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 1,
+        "type": "substitution",
+        "label": "错读",
+        "start": 3.3,
+        "end": 4.64,
+        "expected": "录音时",
+        "observed": "露营是",
+        "confidence": 0.879,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 2,
+        "type": "substitution",
+        "label": "错读",
+        "start": 5.28,
+        "end": 6.84,
+        "expected": "环境安静",
+        "observed": "半天半天",
+        "confidence": 0.09,
+        "timing": "模型词区间估计",
+        "state": "review"
+      },
+      {
+        "id": 3,
+        "type": "possible_clipping",
+        "label": "疑似削波",
+        "start": 0.0,
+        "end": 15.53,
+        "expected": "",
+        "observed": "",
+        "confidence": null,
+        "timing": "音量峰值线索，定位为全片",
+        "state": "review"
+      }
+    ],
+    "similarity": 0.775,
+    "warning": "同音字、中文数字语义和专有名词可能误判或漏检；发布前请完整回听。",
+    "conclusion": "建议复核"
+  }
+}

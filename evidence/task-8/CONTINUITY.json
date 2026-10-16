@@ -1,0 +1,72 @@
+{
+  "schema_version": "agent-company-continuity/v1",
+  "role": "Product Engineer",
+  "summary": "已先提交产品形态决策，再在正式VoiceProof task/8实现本机Web消费者工程闭环；23项测试及真实ASR浏览器流程通过。真实人声低误报、独立验收和可信远程推送尚未完成，未宣称外部发布或全量产品验收。",
+  "verified_facts": [
+    "上下文ctx-task-8-generation-3、bundle 0ea425c7b63d0fd2b8f91a5b3f3f070ffd0933e6613dae8dfb8012d7cd74761d已读取；正式仓origin及task/8确认。",
+    "产品形态先行提交fbd5188；工程源提交0048a88。",
+    "Python3.11.17下canonical unittest 23通过，0失败0跳过；标准安装、JS语法和diff检查通过。",
+    "真实本地small模型处理15.529秒合成语音耗时4.801秒，归一化token相似度0.775，4候选问题，0自动必须重录。",
+    "实际浏览器WAV/MP4输入、转写、回听、分级、确认/忽略、文本导出、清空删除、坏文件恢复通过；运行16.84秒，0前端异常、0观察到的页面外部请求。",
+    "未执行git push；未发布、收费、联系客户或处理真实客户数据。"
+  ],
+  "open_items": [
+    "可信运行器完成交付验证及task/8推送并确认远程SHA。",
+    "CEO审阅形态/合同及章程PixWeave名称陈旧问题。",
+    "独立质量审阅与真实人声低误报/召回评测尚未完成。",
+    "任务9代表场景与证据缺口交接未收到。",
+    "消费级安装包、国内首次模型GUI下载及全格式跨系统兼容尚待验证。"
+  ],
+  "project_summary": "VoiceProof由CLI质检内核升级为同仓本机浏览器应用：本地媒体解码、离线带时间点ASR、原稿/术语对齐、基础音质、证据回听、用户确认后发布前结论、可读失败与报告、有限临时存储生命周期。仅内部工程交付。",
+  "project_decisions": [
+    "推荐桌面优先本机Web，比较移动Web/小程序/原生桌面后暂不新增平台实现。",
+    "素材在本机处理；模型下载与识别分离，识别worker离线，限制100MB/10分钟音轨/20000字，单任务15分钟超时，闲置30分钟清理。",
+    "ASR候选默认建议复核；用户确认才必须重录；忽略/无问题仍须完整回听。",
+    "繁简与规范基数保守归一化；保留原始转写；词时间点估计，漏读用相邻锚点且不显示声学置信值。",
+    "固定small模型revision及测试依赖；不把合成或自动化证据当真实用户质量或需求证据。"
+  ],
+  "known_limits": [
+    "单一机器合成音频不证明真实普通话质量，已观察ASR误识别。",
+    "时间点估计、同音字/方言/日期语义/复杂术语存在误报漏检；音量指标不等于听感。",
+    "需要内部维护人员预配置Python/依赖；未提供独立消费者安装包。",
+    "首次GUI模型下载、国内网络、MOV/WebM/OGG兼容矩阵和Windows/macOS未完整实测。",
+    "正常退出/清空会清理；强杀或断电可能残留系统临时文件，页面刷新会重置未导出的复核状态。",
+    "当前未独立验收、未观察正式远程推送，形态是工程推荐而非已批准发布。"
+  ],
+  "handoffs": [
+    {
+      "to_role": "CEO",
+      "handoff_type": "review_request",
+      "summary": "任务8工程与证据已提交；请审阅首发形态及体验合同，确认VoiceProof任务授权与陈旧PixWeave章程名称；安排可信推送及后续质量验收。状态：工程可审阅，远程及产品质量验收待完成。",
+      "artifact_refs": [
+        "/home/tony/agent-workspaces/product-engineer/task-8-voiceproof/docs/product/DECISION-8.md",
+        "/home/tony/agent-company/evidence/task-8/VERIFICATION.md",
+        "/home/tony/agent-company/evidence/task-8/MANIFEST.json"
+      ],
+      "decision_needed": "审阅首发推荐、确认章程适用范围及剩余验收优先级；外部行动仍需董事长批准。"
+    },
+    {
+      "to_role": "Independent Quality Reviewer",
+      "handoff_type": "review_request",
+      "summary": "请独立检查0048a88的产品闭环、安全/临时文件控制与证据边界；23单元测试及真实合成ASR浏览器流程已过，但不代表人声低误报或发布就绪。",
+      "artifact_refs": [
+        "/home/tony/agent-company/evidence/task-8/VERIFICATION.md",
+        "/home/tony/agent-company/evidence/task-8/asr-results.json",
+        "/home/tony/agent-company/evidence/task-8/browser-results.json",
+        "/home/tony/agent-company/evidence/task-8/MANIFEST.json"
+      ],
+      "decision_needed": "返回独立验收意见、质量缺口和可复现问题；未请求外部发布。"
+    },
+    {
+      "to_role": "Customer & Revenue",
+      "handoff_type": "evidence_request",
+      "summary": "任务8尚未收到任务9代表场景交接，目前使用明确标注的内部合成夹具。请提供场景约束与证据缺口，避免将工程假设当需求证据。",
+      "artifact_refs": [
+        "/home/tony/agent-workspaces/product-engineer/task-8-voiceproof/tests/fixtures/README.md",
+        "/home/tony/agent-workspaces/product-engineer/task-8-voiceproof/tests/fixtures/scenarios.json",
+        "/home/tony/agent-company/evidence/task-8/VERIFICATION.md"
+      ],
+      "decision_needed": "提供任务9代表性场景与验收建议；不得发送未获准真实客户素材。"
+    }
+  ]
+}

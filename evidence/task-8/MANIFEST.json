@@ -1,0 +1,82 @@
+{
+  "schema_version": "task-delivery-manifest/v1",
+  "task": 8,
+  "repository": "git@github.com:TonysBlue/VoiceProof.git",
+  "branch": "task/8",
+  "context_id": "ctx-task-8-generation-3",
+  "bundle_sha256": "0ea425c7b63d0fd2b8f91a5b3f3f070ffd0933e6613dae8dfb8012d7cd74761d",
+  "product_base": "0048a8844ef2b2e76eed796954160d83cf8f5ce8",
+  "decision_commit": "fbd518834174b639d7a38a1b96caa807add4dc98",
+  "acceptance": "Internal engineering loop verified; true human-speech low-false-positive quality, independent acceptance and trusted remote push remain pending. No external launch authorization.",
+  "files": {
+    ".gitignore": "027b91b0560c1c21c983040f864c84f66f61d318cb7e66f0b2ee74478b8e44d9",
+    "README.md": "52d87911a94d02e0a3625618c39ae42f03d9c16ad8dd206af88c112f3be5a00e",
+    "docs/product/DECISION-8.md": "77fbc4382ba7aa43abbf8005d1ef04c462d553e5e49618871d4e6bfe14a5ee7c",
+    "evidence/task-8/CONTINUITY.json": "c286e8bac77993b366a426c89c64ad9e19c764904fdc917fc145c80ba2e864ca",
+    "evidence/task-8/VERIFICATION.md": "d4df1a56e9f58922337c04f8b819d440343946e96996a31e70d75521e180aee6",
+    "evidence/task-8/asr-results.json": "782b350d465804c4971cb34d508cabafdfa8682eef871985ee5df97c0cccb962",
+    "evidence/task-8/browser-report.txt": "717588440a5c933a7784ac5c8a6ccd26a2c8bb9ed543b4f4007fd51b305a872d",
+    "evidence/task-8/browser-results.json": "379b2cae170584fc5a9486ad6a5ff93237c6ee0237af5db2c48e26d9412b6416",
+    "evidence/task-8/desktop-input.png": "5c92c10f2cee4aef3c4080a6668849a2a208a22e60cbdbb6bf777a8e275d5d61",
+    "evidence/task-8/desktop-review.png": "9689ed7704ea5c6ae1d15b097f4f29e590e769196b2a8194745b54161811128a",
+    "evidence/task-8/environment.json": "80273f35bd19ea982f11eb53eb5033a2192dda618251f9e2b5d40a38c1429e42",
+    "evidence/task-8/failure.png": "98a6c00aa8c8679ac93ec6eb0281184470701b014d25a947bfe9a3d6916084f9",
+    "evidence/task-8/mobile-layout.png": "7f5f36205a66447779abf8a0767c8e469ba426500b878687b55d55808ef2e448",
+    "evidence/task-8/model-cache-setup.json": "e16b060471d389c1f23a2892df8c41688051812f18852e1f2dca8ece508c01de",
+    "evidence/task-8/synthetic-input.mp4": "c15a1946324cf6daac7e3691aa5a007c035997130d3b3b07fb2877303f4319db",
+    "evidence/task-8/unit-tests.txt": "20671142e85964e1dab70f5ddb267a4b27f8060351ab31ca7f838b2374cb12ba",
+    "launch.pyw": "5edf031e7662af8fd4149accbd008f8ab04e3596b071bd96cfc9ca1d3dc207ed",
+    "pyproject.toml": "4ead45284c09d0f686f440be842d5d35cb613f741ec81e5762bd96a407b0694a",
+    "requirements-local.lock": "26d3f393b6944bb4ef07f2bcb0d0d54f6890e257e587f45e262345f03afa0d92",
+    "scripts/evaluate_asr.py": "8ef46facede8f2f81e68c507a8ba8280d7ef4331a3eda168da568ab86f967c10",
+    "scripts/make_media_fixtures.py": "5bfc352de0a2ba34186dedcb08160097103edf0f2272b17e885196399743f3a2",
+    "scripts/verify_browser.py": "b68a3644ef14b90218c706c0c58fc981b98f22ad48b033a0df90ba87acc4963e",
+    "tests/fixtures/README.md": "bcceffb6d028fe773de69a145f4cb680b015df31e7630b060e38f75cd81d5217",
+    "tests/fixtures/mandarin-synthetic.wav": "55c1c086feaaaaf4c045fda63985a71eb525dea4e3c8fb5f6417dff8651226b7",
+    "tests/fixtures/scenarios.json": "cc78524cde81d5a0fb216eef4f026d591901cf4ce89867297ba8a54dedb32e22",
+    "tests/test_server.py": "af869873a5d79c06599fd073b904eff28aea9c9406bbd4c704629d0758522123",
+    "tests/test_workflow.py": "32e95f627e202ab5c92f35c1b14f5d7e8214c78566a1aa1cd81b144a2a6a20ec",
+    "voiceproof/chinese.py": "23c165eb9e03768b90cbe08082c9cc7d9e3d9e6ceb0cbb1e17a3cde9ec492425",
+    "voiceproof/numbers.py": "4160a1690557bdeb94bf45fea0881f79c321f1da7f01883b12fc5b79439669e2",
+    "voiceproof/server.py": "76762ebeee9389b57116b40923a3bbe49aad53b630595332019ccbb9780a86d0",
+    "voiceproof/static/app.js": "b169a76d062abcab1d3f8a7079ff5b7da22edab7a0f9117df49efe8d6e19e03f",
+    "voiceproof/static/index.html": "d1996626389ce9875098772cd11ba43791a9686b730148fee2eb4385f080dae6",
+    "voiceproof/static/style.css": "a81d00c1f7e9893e7a45cdc4bb9adc23c697bafb2e7f0a00368f7847015f297d",
+    "voiceproof/worker.py": "402189ae08b23e6fb33ab7723650d0224860b44afe79a1edea78f86965292d2d",
+    "voiceproof/workflow.py": "46019581a3e5bd3b4b3a64d05bb8b9d2ef87fd6b11f44b49bc41f8a2719d0049"
+  },
+  "delivery_status": "pending trusted runner validation and push; agent did not execute git push",
+  "verification": {
+    "canonical": {
+      "command": "python3.11 -m unittest discover -s tests -v",
+      "environment_prefix": "PATH=\"$PWD/.runtime/bin:$PATH\"",
+      "python": "3.11.17",
+      "tests": 23,
+      "failures": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "source": "implementer-run tests, not independent review"
+    },
+    "real_asr": {
+      "fixture": "synthetic Mandarin, no customer data",
+      "seconds": 4.801,
+      "media_seconds": 15.529125,
+      "normalized_token_similarity": 0.775,
+      "candidate_issues": 4,
+      "automatic_rerecord": 0
+    },
+    "browser": {
+      "real_asr": true,
+      "real_wav_and_mp4": true,
+      "seconds": 16.84,
+      "page_errors": 0,
+      "external_page_requests": 0,
+      "confirmation": "simulated user clicks; not a human listening judgment"
+    },
+    "supplemental": [
+      "editable product installation successful",
+      "node --check voiceproof/static/app.js passed",
+      "git diff --check passed"
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+test_reports_number_term_and_text_differences (test_alignment.AlignmentTests.test_reports_number_term_and_text_differences) ... ok
+test_detects_long_silence_and_low_level (test_audio.AudioTests.test_detects_long_silence_and_low_level) ... ok
+test_writes_structured_report (test_cli.CliTests.test_writes_structured_report) ... ok
+test_healthy_wav_and_empty_wav (test_end_to_end.EndToEndTests.test_healthy_wav_and_empty_wav) ... ok
+test_invalid_inputs_fail_without_report_or_traceback (test_end_to_end.EndToEndTests.test_invalid_inputs_fail_without_report_or_traceback) ... ok
+test_pcm_widths_and_channels (test_end_to_end.EndToEndTests.test_pcm_widths_and_channels) ... ok
+test_protect_inputs_and_reject_empty_text (test_end_to_end.EndToEndTests.test_protect_inputs_and_reject_empty_text) ... ok
+test_text_report_and_multiword_term (test_end_to_end.EndToEndTests.test_text_report_and_multiword_term) ... ok
+test_graphical_upload_uses_form_and_not_json (test_server.ServerTests.test_graphical_upload_uses_form_and_not_json) ... ok
+test_invalid_inputs_and_worker_failure (test_server.ServerTests.test_invalid_inputs_and_worker_failure) ... ok
+test_job_lifecycle_cancel_expire_timeout_and_media_range (test_server.ServerTests.test_job_lifecycle_cancel_expire_timeout_and_media_range) ... ok
+test_security_static_and_mutations (test_server.ServerTests.test_security_static_and_mutations) ... ok
+test_upload_limits_and_model_readiness (test_server.ServerTests.test_upload_limits_and_model_readiness) ... ok
+test_all_compressed_fixtures_decode_with_real_video (test_workflow.MediaBoundaryTests.test_all_compressed_fixtures_decode_with_real_video) ... ok
+test_decoded_duration_limit_and_no_audio (test_workflow.MediaBoundaryTests.test_decoded_duration_limit_and_no_audio) ... ok
+test_conservative_readings (test_workflow.NumberNormalizationTests.test_conservative_readings) ... ok
+test_bad_media_returns_chinese_recovery_without_stack_or_json_input_from_user (test_workflow.RealWorkerFailureTests.test_bad_media_returns_chinese_recovery_without_stack_or_json_input_from_user) ... ok
+test_split_number_and_latin_word_timestamps_reassemble (test_workflow.WordBoundaryRegressionTests.test_split_number_and_latin_word_timestamps_reassemble) ... ok
+test_audio_issues_are_review_only (test_workflow.WorkflowTests.test_audio_issues_are_review_only) ... ok
+test_empty_invalid_or_inconsistent_asr_cannot_pass (test_workflow.WorkflowTests.test_empty_invalid_or_inconsistent_asr_cannot_pass) ... ok
+test_local_decoder_and_full_pipeline_with_stubbed_recognition (test_workflow.WorkflowTests.test_local_decoder_and_full_pipeline_with_stubbed_recognition) ... ok
+test_representative_synthetic_scenarios_and_false_positive_budget (test_workflow.WorkflowTests.test_representative_synthetic_scenarios_and_false_positive_budget) ... ok
+test_traditional_script_and_terms_do_not_cause_false_alarms (test_workflow.WrittenVariantTests.test_traditional_script_and_terms_do_not_cause_false_alarms) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 5.513s
+
+OK
